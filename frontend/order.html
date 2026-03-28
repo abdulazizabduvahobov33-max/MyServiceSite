@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+</head>
+
+<body class="bg-[#0a0503] text-white flex justify-center items-center min-h-screen">
+
+  <div class="bg-[#1a0502] p-8 rounded-2xl w-full max-w-md shadow-2xl">
+
+    <h1 class="text-2xl text-orange-500 mb-4 text-center">
+      Оставить заявку 🚀
+    </h1>
+
+    <!-- выбранный проект -->
+    <p id="selectedProject" class="text-gray-400 text-center mb-6"></p>
+
+    <input id="name" type="text" placeholder="Ваше имя"
+      class="w-full p-3 mb-3 rounded bg-black">
+
+    <input id="contact" type="text" placeholder="Телефон или Telegram"
+      class="w-full p-3 mb-3 rounded bg-black">
+
+    <textarea id="message" placeholder="Что нужно сделать?"
+      class="w-full p-3 mb-3 rounded bg-black"></textarea>
+
+    <button onclick="sendOrder()"
+      class="w-full bg-orange-500 py-3 rounded text-lg hover:scale-105 transition">
+      Отправить заявку 💸
+    </button>
+
+    <p id="status" class="text-center mt-4 text-gray-400"></p>
+
+  </div>
+
+  <script src="order.js"></script>
+
+</body>
+</html>
