@@ -1,6 +1,5 @@
 window.onload = () => {
   const project = localStorage.getItem('selectedProject');
-
   if (project) {
     document.getElementById('selectedProject').textContent =
       "Вы выбрали: " + project;
@@ -22,12 +21,7 @@ async function sendOrder() {
 
   status.textContent = "Отправка... ⏳";
 
-  const order = {
-    name,
-    contact,
-    message,
-    project
-  };
+  const order = { name, contact, message, project };
 
   try {
     const res = await fetch('http://localhost:3000/order', {
@@ -37,11 +31,8 @@ async function sendOrder() {
     });
 
     const data = await res.json();
-
     status.textContent = "Заявка отправлена ✅";
-
     localStorage.removeItem('selectedProject');
-
   } catch (err) {
     status.textContent = "Ошибка ❌";
     console.error(err);
